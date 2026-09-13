@@ -90,6 +90,7 @@
           <tr><td>Şikâyetler ve engellemeler</td><td>Topluluğu korumak ve engellediğin kişilerin içeriğini sana göstermemek için.</td><td>Gizli.</td></tr>
           <tr><td>Geliştirici mesajları ve itirazlar</td><td>Sana gönderdiğimiz uygulama içi mesajlar ve askıya alma kararlarına yaptığın itirazların metni.</td><td>Gizli.</td></tr>
           <tr><td>IP adresi</td><td>Kötüye kullanımı (toplu hesap açma) önlemek için IP adresinin tek yönlü özeti 24 saat saklanır; IP adresinin kendisi veritabanımıza yazılmaz. Altyapı sağlayıcımız Cloudflare, ağ güvenliği için IP adreslerini işleyebilir.</td><td>Gizli.</td></tr>
+          <tr><td>Cihaz doğrulama (Apple DeviceCheck)</td><td>Askıya alınan bir hesabın aynı cihazdan yeniden açılmasını önlemek için uygulama Apple'dan geçici bir doğrulama token'ı alır. Token cihazını ya da seni tanımlamaz; en son token hesabın açık olduğu sürece saklanır. Apple, cihaz başına yalnızca iki bitlik bir işaret (ör. "bu cihazdaki bir hesap askıya alındı") tutar; bu işaret uygulama silinse de korunur.</td><td>Gizli. Apple dışında kimseyle paylaşılmaz.</td></tr>
           <tr><td>Konum</td><td>Yakınındaki mekânları bulmak için yalnızca uygulama açıkken ve iznin olursa kullanılır. “Yakınımda” filtresini açtığında yaklaşık koordinatın sonuçları filtrelemek için isteğe eklenir ancak <strong>saklanmaz</strong>. Arka planda konum kullanılmaz.</td><td>Kimse (elle mekân ekleme durumu hariç, yukarıya bakınız).</td></tr>
           <tr><td>Otomatik denetim kayıtları</td><td>Her yüklemenin güvenlik denetimi sonucu (temiz/uygunsuz, kategori, güven puanı) ve görselin tek yönlü özeti. <strong>Görselin kendisi bu kayıtta tutulmaz.</strong></td><td>Gizli.</td></tr>
         </tbody>
@@ -107,7 +108,7 @@
     <h2>5. Verileri kimlerle paylaşıyoruz?</h2>
     <ul>
       <li><strong>Cloudflare, Inc.</strong> – sunucu, veritabanı, fotoğraf depolama ve yapay zekâ denetimi altyapısı (hizmet sağlayıcı / veri işleyen). Veritabanı ve fotoğraflar için Doğu Avrupa bölgesi tercih edilmiştir; veriler Cloudflare'in küresel ağı üzerinden işlenebilir.</li>
-      <li><strong>Apple</strong> – mekân araması ve konum hizmetleri iOS'un Apple Haritalar altyapısı üzerinden, doğrudan cihazından Apple'a gider ve <a href="https://www.apple.com/legal/privacy/">Apple'ın gizlilik politikasına</a> tabidir.</li>
+      <li><strong>Apple</strong> – cihaz doğrulama (DeviceCheck), mekân araması ve konum hizmetleri iOS'un Apple Haritalar altyapısı üzerinden, doğrudan cihazından Apple'a gider ve <a href="https://www.apple.com/legal/privacy/">Apple'ın gizlilik politikasına</a> tabidir.</li>
       <li><strong>Diğer kullanıcılar</strong> – yukarıda “herkese açık” olarak belirtilen içerikleri görebilir.</li>
       <li><strong>Yetkili makamlar</strong> – yalnızca yasal bir zorunluluk olduğunda.</li>
     </ul>
@@ -132,7 +133,7 @@
     <p>Hesabını ve verilerini uygulama içinden anında silebilirsin. Diğer talepler için <a href="mailto:arutkayaziz@gmail.com">arutkayaziz@gmail.com</a> adresine, uygulamadaki takma adını da belirterek yazabilirsin. Anonim bir hizmet olduğumuz için talebin sahibini doğrulamak adına ek bilgi isteyebiliriz. Taleplere en geç 30 gün içinde yanıt veririz. Ayrıca Kişisel Verileri Koruma Kurulu'na veya bulunduğun ülkedeki veri koruma otoritesine şikâyette bulunma hakkın vardır.</p>
 
     <h2>9. Çocuklar</h2>
-    <p>Mekanım 17 yaş ve üzeri kullanıcılar içindir. 17 yaşından küçüklerin uygulamayı kullanmasına izin vermeyiz; böyle bir hesabı fark edersek sileriz.</p>
+    <p>Mekanım 18 yaş ve üzeri kullanıcılar içindir. 18 yaşından küçüklerin uygulamayı kullanmasına izin vermeyiz; böyle bir hesabı fark edersek sileriz.</p>
 
     <h2>10. Güvenlik</h2>
     <p>Tüm bağlantılar HTTPS ile şifrelenir, oturum anahtarları sunucuda yalnızca özet olarak tutulur ve yönetim işlemleri gizli anahtarla korunur. Hiçbir sistem tamamen risksiz değildir; bir güvenlik ihlali olursa mevzuatın gerektirdiği bildirimleri yaparız.</p>
@@ -183,6 +184,7 @@
           <tr><td>Reports and blocks</td><td>To keep the community safe and hide content from people you block.</td><td>Private.</td></tr>
           <tr><td>Developer messages and appeals</td><td>In-app messages we send you and the text of any appeal you submit.</td><td>Private.</td></tr>
           <tr><td>IP address</td><td>To prevent abuse (mass account creation), a one-way hash of your IP address is kept for 24 hours; the IP address itself is not written to our database. Our infrastructure provider Cloudflare may process IP addresses for network security.</td><td>Private.</td></tr>
+          <tr><td>Device verification (Apple DeviceCheck)</td><td>To prevent a suspended account from being recreated on the same device, the App obtains a temporary verification token from Apple. The token does not identify you or your device; the latest token is kept while your account exists. Apple stores only two bits per device (e.g. "an account on this device was suspended"), which persist even if the App is deleted.</td><td>Private. Not shared with anyone other than Apple.</td></tr>
           <tr><td>Location</td><td>Used only while the App is open and with your permission, to find places near you. When you turn on the “Near me” filter, your approximate coordinates are sent with the request to filter results but are <strong>not stored</strong>. No background location.</td><td>No one (except when adding a place manually, see above).</td></tr>
           <tr><td>Automated moderation records</td><td>The safety-check result of each upload (clean/flagged, category, confidence) and a one-way hash of the image. <strong>The image itself is not kept in these records.</strong></td><td>Private.</td></tr>
         </tbody>
@@ -200,7 +202,7 @@
     <h2>5. Who we share data with</h2>
     <ul>
       <li><strong>Cloudflare, Inc.</strong> – servers, database, photo storage and AI moderation infrastructure (service provider / processor). The Eastern Europe region is preferred for the database and photos; data may be processed across Cloudflare's global network.</li>
-      <li><strong>Apple</strong> – place search and location services go directly from your device to Apple through Apple Maps and are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+      <li><strong>Apple</strong> – device verification (DeviceCheck), place search and location services go directly from your device to Apple through Apple Maps and are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
       <li><strong>Other users</strong> – can see the content marked “public” above.</li>
       <li><strong>Authorities</strong> – only when legally required.</li>
     </ul>
@@ -225,7 +227,7 @@
     <p>You can delete your account and data instantly in the App. For other requests, email <a href="mailto:arutkayaziz@gmail.com">arutkayaziz@gmail.com</a> and include your in-app nickname. Because the service is anonymous, we may ask for additional information to verify the request. We respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.</p>
 
     <h2>9. Children</h2>
-    <p>Mekanım is intended for users aged 17 and over. We do not allow people under 17 to use the App and will delete such accounts if we become aware of them.</p>
+    <p>Mekanım is intended for users aged 18 and over. We do not allow people under 18 to use the App and will delete such accounts if we become aware of them.</p>
 
     <h2>10. Security</h2>
     <p>All connections are encrypted with HTTPS, session keys are stored only as hashes on the server, and administrative operations are protected by a secret key. No system is completely risk-free; if a security breach occurs, we will make the notifications required by law.</p>
